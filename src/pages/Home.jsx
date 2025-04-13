@@ -28,9 +28,14 @@ const Home = () => {
     fetchProducts()
   }, []);
 
-  useEffect(() => {
-    console.log(products)
-  }, [products])
+  // useEffect(() => {
+  //   console.log(products)
+  //   if (products.length)
+  //     products.forEach((p)=>{
+  //   addToCart(p)
+  // })
+
+  // }, [products])
 
   const addToCart = (product) => {
         setProductsInCart((prev) => {
@@ -49,8 +54,8 @@ const Home = () => {
   return (
     <div className="container m-auto ">
         <Navbar />
-      <div className="grid md:grid-rows-1 md:grid-cols-12  grid-cols-1 grid-rows-12 md:grid-flow-col grid-flow-row gap-4 px-4 py-4">
-        <div className="md:h-screen z-3 p-4  bg-gray-100 rounded-xl  row-span-1 md:col-span-3 row-span-12 sticky top-[80px] md:top-[80px] ">
+      <div className="grid  md:grid-cols-12  grid-cols-1 md:grid-flow-col grid-flow-row gap-4 px-4 py-4">
+        <div className="z-3 p-4  bg-gray-100 rounded-xl md:col-span-3 sticky top-[0px] md:top-[80px] ">
         <Filters  filterProducts={setProducts} />
         </div>
         <div className="p-4 w-full bg-gray-100 rounded-xl row-span-2 md:col-span-12 row-span-2" >

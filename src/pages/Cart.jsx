@@ -50,8 +50,8 @@ const Cart = () => {
       <Navbar />
       {Object.values(products).length ? (
         <>
-          <div className="grid grid-rows-1 grid-cols-12 grid-flow-col gap-4 px-4 py-4">
-            <div className="col-span-12  ">
+          <div className="grid grid-cols-1 md:grid-cols-12 md:grid-flow-col grid-flow-row gap-4 px-4 py-4">
+            <div className="bg-gray-100 rounded-xl  p-4 row-span-12 col-span-1  md:col-span-12 md:row-span-1 ">
               <div className="flex flex-row flex-wrap gap-4 align-center justify-center">
                 {Object.values(products)?.map((product) => {
                   console.log(product);
@@ -66,8 +66,7 @@ const Cart = () => {
                 })}
               </div>
             </div>
-
-            <div className="my-4  row-span-2 col-span-2 sticky top-[80px]">
+            <div className="rounded-lg  h-[100px] bg-gray-100 w-full p-4 order-first md:order-last col-span-1 md:col-span-2 sticky top-[0px] md:top-[80px]">
               <h1 className="text1">
                 Subtotal
                 <span className="px-4 text-lg text-green-500">
